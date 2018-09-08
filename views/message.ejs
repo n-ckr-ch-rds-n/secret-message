@@ -6,11 +6,11 @@
   </head>
   <body>
     <h1>Encrypted message: <%= encryptedmessage %></h1>
-    <h2><%= message.question %></h2>
+    <h2><%= question.question %></h2>
     <form id="questions" action="/decrypt" method='post'>
-      <input type="radio" name="key" value='Shamash'><%= message.answers[0].text %><br>
-      <input type="radio" name="key" value=<%= message.answers[1].key %>><%= message.answers[1].text %><br>
-      <input type="radio" name="key" value=<%= message.answers[2].key %>><%= message.answers[2].text %><br>
+      <input type="radio" name="key" value=<%= question.answers[0].key %>><%= question.answers[0].text %><br>
+      <input type="radio" name="key" value=<%= question.answers[1].key %>><%= question.answers[1].text %><br>
+      <input type="radio" name="key" value=<%= question.answers[2].key %>><%= question.answers[2].text %><br>
       <input type="submit">
     </form>
     <div id="timer">

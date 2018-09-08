@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-var datamodule = require('../public/javascripts/getmessage.js');
+var quiz = require('../public/javascripts/quiz.js');
 var Encryption = require('../public/javascripts/encryption.js');
 
 const encryption = new Encryption();
@@ -10,9 +10,9 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/message', function(req, res, next) {
-  const message = datamodule.getMessage();
+  const question = quiz.getQuestion();
   const encryptedmessage = encryption.encrypt();
-  res.render('message', { message: message,
+  res.render('message', { question: question,
     encryptedmessage: encryptedmessage });
 });
 
