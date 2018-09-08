@@ -35,4 +35,10 @@ describe('Secret Message', function() {
     cy.contains('5')
   })
 
+  it('submits form after five seconds', function() {
+    cy.visit('/message')
+    cy.wait(5000)
+    cy.contains('wrong answer')
+  })
+
 })
