@@ -20,7 +20,7 @@ describe('Secret Message', function() {
     cy.visit('/message')
     cy.get('[type="radio"]').last().check()
     cy.get('form').submit()
-    cy.contains('wrong answer')
+    cy.contains('Wrong Answer')
   })
 
   it('the right answer decrypts the message', function() {
@@ -38,7 +38,7 @@ describe('Secret Message', function() {
   it('submits form after five seconds', function() {
     cy.visit('/message')
     cy.wait(5000)
-    cy.contains('wrong answer')
+    cy.contains('Wrong Answer')
   })
 
 })

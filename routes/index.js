@@ -26,4 +26,8 @@ router.post('/decrypt', function(req, res, next) {
   res.render('fail')
 });
 
+router.get('*', function(req, res) {
+    res.redirect('/');
+});
+
 module.exports = router;
