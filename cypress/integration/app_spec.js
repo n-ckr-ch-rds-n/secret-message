@@ -4,7 +4,7 @@ describe('Secret Message', function() {
   })
 
   it('get request to message page renders encoded message', function() {
-    cy.contains('foo123')
+    cy.contains('Encrypted message')
   })
 
   it('has a multiple choice question', function() {

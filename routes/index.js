@@ -17,10 +17,11 @@ router.get('/message', function(req, res, next) {
 });
 
 router.post('/decrypt', function(req, res, next) {
-  const message = datamodule.getMessage();
-  let key = req.body.key;
-  if (key === 'bar1') {
-    res.render('decrypt', { key: key, message: message });
+  const encryptedmessage = encryption.encrypt();
+  const key = req.body.key;
+  const decryptedmessage = encryption.decrypt(encryptedmessage, key)
+  if (decryptedmessage.length > 0) {
+    res.render('decrypt', { decryptedmessage: decryptedmessage });
   }
   res.send('wrong answer')
 });

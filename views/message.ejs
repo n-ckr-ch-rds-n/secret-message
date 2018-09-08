@@ -5,10 +5,10 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>Encoded message: <%= encryptedmessage %></h1>
+    <h1>Encrypted message: <%= encryptedmessage %></h1>
     <h2><%= message.question %></h2>
     <form id="questions" action="/decrypt" method='post'>
-      <input type="radio" name="key" value=<%= message.answers[0].key %>><%= message.answers[0].text %><br>
+      <input type="radio" name="key" value='Shamash'><%= message.answers[0].text %><br>
       <input type="radio" name="key" value=<%= message.answers[1].key %>><%= message.answers[1].text %><br>
       <input type="radio" name="key" value=<%= message.answers[2].key %>><%= message.answers[2].text %><br>
       <input type="submit">
