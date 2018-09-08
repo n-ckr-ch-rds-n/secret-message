@@ -6,4 +6,9 @@ describe('Secret Message', function() {
   it('get request to message page renders encoded message', function() {
     cy.contains('foo123')
   })
+
+  it('has a multiple choice question', function() {
+    cy.get('[type="radio"]').first().check()
+  })
+  
 })
