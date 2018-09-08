@@ -10,5 +10,17 @@ describe('Secret Message', function() {
   it('has a multiple choice question', function() {
     cy.get('[type="radio"]').first().check()
   })
-  
+
+  it('submitting form makes post request to /decrypt', function() {
+    cy.get('form').submit()
+    cy.url().should('include', '/decrypt')
+  })
+
+  it('the wrong answer does not decrypt message', function() {
+    cy.visit('/message')
+    cy.get('[type="radio"]').last().check()
+    cy.get('form').submit()
+    cy.contains('wrong answer')
+  })
+
 })
