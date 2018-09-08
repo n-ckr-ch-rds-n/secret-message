@@ -5,26 +5,34 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h1>Encrypted message: <%= encryptedmessage %></h1>
-    <h2><%= question.question %></h2>
-    <form id="questions" action="/decrypt" method='post'>
-      <input type="radio" name="key" value=<%= question.answers[0].key %>><%= question.answers[0].text %><br>
-      <input type="radio" name="key" value=<%= question.answers[1].key %>><%= question.answers[1].text %><br>
-      <input type="radio" name="key" value=<%= question.answers[2].key %>><%= question.answers[2].text %><br>
-      <input type="submit">
-    </form>
-    <div id="timer">
+    <div class="header">
+      <p>Encrypted message: <%= encryptedmessage %></p>
+    </div>
+    <div class="grid-container">
+      <div class="quiz">
+      <h2><%= question.question %></h2>
+        <form id="questions" action="/decrypt" method='post'>
+          <input type="radio" name="key" value=<%= question.answers[0].key %>><%= question.answers[0].text %><br>
+          <input type="radio" name="key" value=<%= question.answers[1].key %>><%= question.answers[1].text %><br>
+          <input type="radio" name="key" value=<%= question.answers[2].key %>><%= question.answers[2].text %><br>
+          <input type="submit">
+        </form>
+      </div>
+      <div id="timer" class="timer">
+        5
+      </div>
+
     </div>
     <script>
-      let seconds = 5;
-      let timer = document.getElementById("timer");
-      setInterval(()=> {
-        timer.innerHTML = seconds;
-        seconds--;
-        if (seconds === -1) {
-          document.getElementById("questions").submit();
-        }
-      }, 1000);
+      // let seconds = 5;
+      // let timer = document.getElementById("timer");
+      // setInterval(()=> {
+      //   timer.innerHTML = seconds;
+      //   seconds--;
+      //   if (seconds === -1) {
+      //     document.getElementById("questions").submit();
+      //   }
+      // }, 1000);
     </script>
   </body>
 </html>
