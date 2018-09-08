@@ -30,4 +30,9 @@ describe('Secret Message', function() {
     cy.contains('Decrypted message')
   })
 
+  it('question page contains a timer', function() {
+    cy.visit('/message')
+    cy.contains('5')
+  })
+
 })
