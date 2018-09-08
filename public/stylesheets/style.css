@@ -21,7 +21,7 @@ input {
 
 .grid-container {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: 60% 40%;
   margin: 5%;
 }
 
@@ -29,7 +29,7 @@ input {
   grid-column: 1;
   border-style: solid;
   border-width: 1px;
-  padding: 5%;
+  padding: 2vw;
   background-color: #F1F1F1;
 }
 
@@ -40,7 +40,7 @@ input {
   border-color: black;
   border-width: 1px;
   text-align:center;
-  padding: 6%;
+  padding: 2vw;
   margin-left: 15%;
   background-color: #F1F1F1;
   color: #009900;
@@ -54,6 +54,17 @@ input {
 }
 
 .decrypted {
+  background-color: #F1F1F1;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  margin: 20%;
+  text-align: center;
+  font-size: 3vw;
+  padding: 2%;
+}
+
+.fail {
   background-color: #F1F1F1;
   border-style: solid;
   border-color: black;

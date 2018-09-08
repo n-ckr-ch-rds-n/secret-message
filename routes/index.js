@@ -6,7 +6,7 @@ var Encryption = require('../public/javascripts/encryption.js');
 const encryption = new Encryption();
 
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.redirect('/message');
 });
 
 router.get('/message', function(req, res, next) {
@@ -23,7 +23,7 @@ router.post('/decrypt', function(req, res, next) {
   if (decryptedmessage.length > 0) {
     res.render('decrypt', { decryptedmessage: decryptedmessage });
   }
-  res.send('wrong answer')
+  res.render('fail')
 });
 
 module.exports = router;
