@@ -3,6 +3,7 @@
   <head>
     <title>Secret Message</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond" rel="stylesheet">
   </head>
   <body>
     <div class="header">
@@ -15,13 +16,12 @@
           <input type="radio" name="key" value=<%= question.answers[0].key %>><%= question.answers[0].text %><br>
           <input type="radio" name="key" value=<%= question.answers[1].key %>><%= question.answers[1].text %><br>
           <input type="radio" name="key" value=<%= question.answers[2].key %>><%= question.answers[2].text %><br>
-          <input type="submit">
+          <input class="submit" type="submit">
         </form>
       </div>
       <div id="timer" class="timer">
         5
       </div>
-
     </div>
     <script>
       // let seconds = 5;

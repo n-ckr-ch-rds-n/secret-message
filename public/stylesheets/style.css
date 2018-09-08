@@ -1,5 +1,5 @@
 body {
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: 'Cormorant Garamond', serif;
   background-image: url("../images/green-swirl-animated-1.gif");
 }
 
@@ -15,6 +15,8 @@ input {
     background-color: #F1F1F1;
     text-align: center;
     padding: 20px;
+    border-style: solid;
+    border-width: 1px;
 }
 
 .grid-container {
@@ -35,10 +37,29 @@ input {
   grid-column: 2;
   font-size: 10vw;
   border-style: solid;
+  border-color: black;
   border-width: 1px;
   text-align:center;
-  padding: 5%;
+  padding: 6%;
   margin-left: 15%;
   background-color: #F1F1F1;
+  color: #009900;
+}
 
+.submit {
+  background-color: #4CAF50;
+  color: white;
+  font-size: 1.5vw;
+  font-family: 'Cormorant Garamond', serif;
+}
+
+.decrypted {
+  background-color: #F1F1F1;
+  border-style: solid;
+  border-color: black;
+  border-width: 1px;
+  margin: 20%;
+  text-align: center;
+  font-size: 3vw;
+  padding: 2%;
 }
