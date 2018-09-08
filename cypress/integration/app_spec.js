@@ -23,4 +23,11 @@ describe('Secret Message', function() {
     cy.contains('wrong answer')
   })
 
+  it('the right answer decrypts the message', function() {
+    cy.visit('/message')
+    cy.get('[type="radio"]').first().check()
+    cy.get('form').submit()
+    cy.contains('Decrypted message')
+  })
+
 })
