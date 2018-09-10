@@ -8,7 +8,9 @@ I decided to build the app with Node.js, as it provides an elegant method for se
 
 My development of the app was Behaviour Driven using the Cypress testing framework. I also decided to use real encryption via the CryptoJS node package, and my encryption module is unit tested using Jest.
 
-Making a GET request to `/message` funnels the encrypted message and the quiz question to the message view. Submitting an answer to the quiz makes a POST request to `/decrypt`. The key is in the body of the request and is passed as an argument to the decrypt function in the encryption module. If the key is correct, the message is decrypted and the user directed to a page that displays it. Otherwise, the user is redirected to a 'wrong answer' page and offered the opportunity to try again.
+Making a GET request to `/message` funnels the encrypted message and the quiz question to the message view. Submitting an answer to the quiz makes a POST request to `/decrypt`. The key is in the body of the request and is passed as an argument to the decrypt function of the encryption module. If the key is correct, the message is decrypted and the user directed to a page that displays it. Otherwise, the user is redirected to a 'wrong answer' page and offered the opportunity to try again.
+
+I used ESLint to detect and correct linting errors.
 
 #### Running the App
 To run the app on your machine, clone this repo, `cd` into it, run `npm install` to install the dependencies and `npm start` to fire up the server, then navigate to http://localhost:3000 in the browser.
@@ -25,3 +27,4 @@ To see the unit tests, simply run `jest`.
 - CryptoJS
 - Cypress
 - Jest
+- ESLint
