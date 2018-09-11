@@ -1,5 +1,5 @@
 ## Rezonence Tech Test
-This app was built as the solution to a tech test set by Rezonence. An encrypted message is stored on the server. It can be decrypted with a key. Users answer a multiple choice question in order to decrypt the message: each answer has a key but only one of them – the correct answer – will work. To test myself further I decided to implement the 'Mission Impossible' version of the app, which gives the user just 5 seconds to answer the question. It's deployed to Heroku here: https://secret-message-rezonence.herokuapp.com/.
+This app was built as the solution to a tech test set by Rezonence. An encrypted message is stored on the server. It can be decrypted with a key. Users answer a multiple choice question in order to decrypt the message: each answer has a key but only one of them – the correct answer – will work. To test myself further I decided to implement the 'Mission Impossible' version of the app, which gives the user just 5 seconds to answer the question. The app is deployed to Heroku here: https://secret-message-rezonence.herokuapp.com/.
 
 ![ScreenShot](public/images/ScreenShot1.png)
 
